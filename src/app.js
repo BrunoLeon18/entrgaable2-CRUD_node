@@ -6,6 +6,7 @@ Todo;
 const app = express()
 const PORT = process.env.PORT ?? 8000
 app.use(express.json())
+app.use(cors())
 
 db.authenticate()
     .then( () => console.log('conexion correcta'))
